@@ -47,8 +47,8 @@ CREATE TABLE titles (
 
 -- Joinnig tables
 CREATE VIEW joined_table AS
-SELECT A.dept_name, B.from_date, B.to_date, D.salary, E.title, F.emp_no,
-F.birth_date, F.first_name, F.last_name, F.gender, F.hire_date
+SELECT A.dept_name, A.dept_no, B.from_date, B.to_date, D.salary, E.title, 
+F.emp_no, F.birth_date, F.first_name, F.last_name, F.gender, F.hire_date
 FROM departments AS A
 LEFT JOIN dept_emp AS B ON A.dept_no = B.dept_no
 LEFT JOIN dept_manager AS C ON B.dept_no = C.dept_no
